@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Sound</title>
+    <style>
+        p{
+            background-color: blueviolet;
+            display: inline-block;
+            padding: 10px;
+            margin: 8px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p id="clickMe">Click me to play a sound!</p>
+    <audio id="sound">
+        <source src="welcome-to-esn-erasmus-party-71928.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const clickMe = document.getElementById('clickMe');
+        const sound = document.getElementById('sound');
+
+        clickMe.addEventListener('click', () => {
+            sound.play();
+        });
+    </script>
+</body>
+</html>
